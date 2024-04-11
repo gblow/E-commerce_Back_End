@@ -40,5 +40,11 @@ The API is accessible at http://localhost:3001/api/ and provides the following e
 To test the API endpoints, you can use tools like Insomnia or Postman.e a tool like Insomnia or Postman to test the API endpoints.
 
 
-## License 
-N/A
+ ## Questions
+  
+ Have questions? Contact me using the following links:
+
+  [GitHub](https://github.com/gblow)
+  
+  [Email: giovanniblow@gmail.com](mailto:giovanniblow@gmail.com)
+
