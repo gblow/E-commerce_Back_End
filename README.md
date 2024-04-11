@@ -1,15 +1,15 @@
-# E-Commerce Backend 🛒
+# E-Commerce Backend 
 
 This project utilizes Express.js API to create a backend for an e-commerce platform, integrating Sequelize for communication with a MySQL database. The backend facilitates the management of products, categories, and tags linked to the products.
 
-## Features 🌟
+## Features 
 
 - Implementation of a RESTful API to handle e-commerce entities such as products, categories, and tags.
 - Full CRUD functionality for each entity, enabling creation, retrieval, updating, and deletion of products, categories, and tags.
 - Integration of Sequelize ORM for efficient database management.
 - Establishment of a secure connection to the MySQL database through the use of environment variables.
 
-## Technologies Used 💻
+## Technologies Used 
 
 - Node.js
 - Express.js
@@ -29,7 +29,7 @@ This project utilizes Express.js API to create a backend for an e-commerce platf
 -npm run seed
 -node sever.js
 
-## Usage 📋
+## Usage 
 
 The API is accessible at http://localhost:3001/api/ and provides the following endpoints:
 
@@ -40,5 +40,5 @@ The API is accessible at http://localhost:3001/api/ and provides the following e
 To test the API endpoints, you can use tools like Insomnia or Postman.e a tool like Insomnia or Postman to test the API endpoints.
 
 
-## License 📄
+## License 
 N/A
