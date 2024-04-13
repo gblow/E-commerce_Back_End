@@ -3,11 +3,11 @@ const { Model, DataTypes } = require("sequelize");
 // import our database connection from config.js
 const sequelize = require("../config/connection");
 
-class Product extends Model {}
+class Item extends Model {}
 
 Product.init(
   {
-    // Define columns for the product table
+    // Define columns for the Itemtable
     id: {
       type: DataTypes.INTEGER, 
       allowNull: false, 

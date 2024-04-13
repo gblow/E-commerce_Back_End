@@ -1,25 +1,11 @@
 const router = require('express').Router();
-const { Tag, Product, ProductTag } = require('../../models');
+const { Tag, Item, ItemTag } = require('../../models');
 
-// The `/api/tags` endpoint
-
-// get all tags with associated product data
-router.get('/', async (req, res) => {
-  try {
-    const tagData = await Tag.findAll({
-      include: [{ model: Product }],
-    });
-    res.status(200).json(tagData);
-  } catch (err) {
-    res.status(500).json({message: "Tag not found"});
-  }
-});
-
-// get one tag by its `id` with associated product data
+// get one tag by its `id` with associated Item data
 router.get('/:id', async (req, res) => {
   try {
     const tagData = await Tag.findByPk(req.params.id, {
-      include: [{ model: Product }],
+      include: [{ model: Item}],
     });
     if (!tagData) {
       res.status(404).json({ message: "No tag found with this id!" });
@@ -31,7 +17,19 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new tag with associated product data
+router.get('/', async (req, res) => {
+  try {
+    const tagData = await Tag.findAll({
+      include: [{ model: Item}],
+    });
+    res.status(200).json(tagData);
+  } catch (err) {
+    res.status(500).json({message: "Tag not found"});
+  }
+});
+
+
+// create new tag with associated Itemdata
 router.post('/', async (req, res) => {
   try {
     const tagData = await Tag.create(req.body);
@@ -41,7 +39,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// update a tag's name by its `id` value with associated product data
+// update a tag's name by its `id` value with associated Itemdata
 router.put('/:id', async (req, res) => {
   try {
     const updated = await Tag.update(req.body, {
@@ -55,7 +53,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// delete on tag by its `id` value with associated product data.
+// delete on tag by its `id` value with associated Itemdata.
 router.delete('/:id', async (req, res) => {
   try {
     const deleted = await Tag.destroy({ where: { id: req.params.id } });
